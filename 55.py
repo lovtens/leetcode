@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/jump-game/
+# dp
 from typing import List
 
 

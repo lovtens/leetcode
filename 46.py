@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/permutations/
-
+# backtracking
 from typing import List
 
 
@@ -11,6 +11,7 @@ class Solution:
         def generate(subset: List[int], visited: set):
             if len(subset) == n:
                 ret.append(subset[:])
+                return
 
             for num in nums:
                 if num in visited:

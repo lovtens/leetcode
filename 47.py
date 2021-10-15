@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/permutations-ii/
-
+# backtracking
 from collections import Counter
 from typing import List
 
@@ -13,6 +13,7 @@ class Solution:
         def generate(comb: List[int], hashtable: dict):
             if len(comb) == n:
                 result.append(comb[:])
+                return
 
             for k, v in hashtable.items():
                 if v < 1:

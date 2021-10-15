@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/get-maximum-in-generated-array/
-
+# recursion
 
 class Solution:
     def getMaximumGenerated(self, n: int) -> int:

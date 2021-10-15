@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/reverse-linked-list/
+# recursion
 from typing import Optional
 
 # Definition for singly-linked list.

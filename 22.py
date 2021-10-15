@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/generate-parentheses/
-
+# backtracking
 from typing import List
 
 class Solution:
@@ -9,6 +9,8 @@ class Solution:
         def backtrack(s, left, right):
             if len(s) == 2 * n:
                 ans.append("".join(s))
+                return
+
             if left < n:
                 s.append("(")
                 backtrack(s, left + 1, right)
