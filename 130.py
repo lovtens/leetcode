@@ -2,6 +2,7 @@
 # dfs
 from typing import List
 
+
 class Solution:
     def solve(self, board: List[List[str]]) -> None:
         """
@@ -9,8 +10,7 @@ class Solution:
         """
 
         def dfs(i: int, j: int, visit):
-            # print(i, j)
-            if (i == 0 or j == 0 or i == len(board) - 1 or j == len(board[0]) - 1) and board[i][j] == 'O':
+            if i == 0 or j == 0 or i == len(board) - 1 or j == len(board[0]) - 1:
                 return False
 
             visit[i][j] = True
@@ -44,5 +44,9 @@ class Solution:
                     visit = []
                     for _ in range(len(board)):
                         visit.append([False] * len(board[0]))
+
                     if dfs(i, j, visit):
-                        board[i][j] = 'X'
+                        for x in range(len(visit)):
+                            for y in range(len(visit[0])):
+                                if visit[x][y]:
+                                    board[x][y] = 'X'
